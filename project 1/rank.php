@@ -1,68 +1,4 @@
-<HTML>
-<head>
-	<title>Rolling Stones Top 100 All Time</title>
-	<meta name="description" content="A list of the top 100 albums of all time, according to Rolling Stone.">
-	<style>
-		h1 {
-			font-family: helvetica;
-			font-weight: normal;
-			color: #FF9900;
-		}
-		h2 {
-			font-family: avenir, calibri, sans-serif;
-			font-weight: normal;
-			color: #0066FF;
-		}
-		body {
-			background-color: black;
-			color: #FFFFFF;
-		}
-		table {
-		    border-collapse: collapse;
-		}	
-		table, th, td {
-			border: 1px solid white;
-		}
-		td {
-		    padding: 15px;
-		}
-		a {
-		    color: #FFFFFF;
-		}
-		a:link {
-		    text-decoration: none;
-		}
-
-		a:visited {
-		    text-decoration: none;
-		}
-
-		a:hover {
-		    text-decoration: underline;
-		}
-
-		a:active {
-		    text-decoration: underline;
-		}
-	</style>
-</head>
-<body>
-	<h1>Rolling Stones Top 100 All Time</h1>
-	<h2>At least, according to some source.</h2>
-
-	<form>
-		<a href="rank.html">Rank</a>
-		<a href="title.html">Title</a>
-		<a href="year.html">Year</a>
-		<br>
-		Sort by
-		<select>
-			<option>Select</option>
-			<option value="rank">Rank</option>
-			<option value="title">Title</option>
-			<option value="year">Year</option>
-		</select>
-	</form>
+<?php include 'header.php';?>
 	<table>
 		<tr>
 			<td>1</td>
@@ -566,4 +502,4 @@
 		</tr>
 	</table>
 </body>
-</HTML>
+</html>

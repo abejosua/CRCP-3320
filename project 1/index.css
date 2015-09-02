@@ -1,0 +1,41 @@
+h1 {
+	font-family: helvetica;
+	font-weight: normal;
+	color: #FF9900;
+}
+h2 {
+	font-family: avenir, calibri, sans-serif;
+	font-weight: normal;
+	color: #0066FF;
+}
+body {
+	background-color: black;
+	color: #FFFFFF;
+}
+table {
+    border-collapse: collapse;
+}	
+table, th, td {
+	border: 1px solid white;
+}
+td {
+    padding: 15px;
+}
+a {
+    color: #FFFFFF;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
