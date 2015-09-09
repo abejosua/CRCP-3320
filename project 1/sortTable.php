@@ -12,6 +12,8 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM albums";
 
+
+
 if ($_GET['sort'] == 'rank')
 {
     $sql .= " ORDER BY rank";
@@ -26,10 +28,16 @@ elseif ($_GET['sort'] == 'year')
 }
 
 $result = $conn->query($sql);
+
+if (!$result) {
+    echo "DB Error, could not query the database\n";
+    echo 'MySQL Error: ' . mysql_error();
+    exit;
+}
+
 while($row = $result->fetch_assoc()) {
     echo "<tr>\n" . "\t<td>" . $row["rank"] . "</td>\n \t<td>" . $row["title"]. "</td>\n \t<td>" . $row["year"]. "</td>\n</tr>\n";
 }
 $conn->close();
 ?>
-
 </table>
