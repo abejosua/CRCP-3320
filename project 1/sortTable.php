@@ -10,22 +10,16 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM albums";
+if (!empty($_POST)) {
+	$sortOrder = $_POST['sortOrder'];
+	$sql = "SELECT * FROM albums ORDER BY ".$sortOrder.";";
+}
+else {
+	$sql = "SELECT * FROM albums ORDER BY rank;";
+}
 
 
 
-if ($_GET['sort'] == 'rank')
-{
-    $sql .= " ORDER BY rank";
-}
-elseif ($_GET['sort'] == 'title')
-{
-    $sql .= " ORDER BY title";
-}
-elseif ($_GET['sort'] == 'year')
-{
-    $sql .= " ORDER BY year;";
-}
 
 $result = $conn->query($sql);
 

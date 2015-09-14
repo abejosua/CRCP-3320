@@ -1,2 +1,3 @@
 <?php include 'header.php';?>
-<?php include 'sortTable.php';?>
+<div id="sortTable">Select an Sort Option!</div>
+
